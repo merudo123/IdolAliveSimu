@@ -2078,13 +2078,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4298112: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4298173: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4298237: function() {return Module.webglContextAttributes.powerPreference;},  
- 4298295: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4298350: function($0) {performance.now = function() { return $0; };},  
- 4298398: function($0) {performance.now = function() { return $0; };},  
- 4298446: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4298048: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4298109: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4298173: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4298231: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4298286: function($0) {performance.now = function() { return $0; };},  
+ 4298334: function($0) {performance.now = function() { return $0; };},  
+ 4298382: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -4703,18 +4703,6 @@ var ASM_CONSTS = {
   		delete webSocketState.instances[instanceId];
   
   		return 0;
-  
-  	}
-
-  function _WebSocketGetState(instanceId) {
-  
-  		var instance = webSocketState.instances[instanceId];
-  		if (!instance) return -1;
-  
-  		if (instance.ws)
-  			return instance.ws.readyState;
-  		else
-  			return 3;
   
   	}
 
@@ -16019,7 +16007,6 @@ var asmLibraryArg = {
   "WebSocketClose": _WebSocketClose,
   "WebSocketConnect": _WebSocketConnect,
   "WebSocketFree": _WebSocketFree,
-  "WebSocketGetState": _WebSocketGetState,
   "WebSocketSendText": _WebSocketSendText,
   "WebSocketSetOnClose": _WebSocketSetOnClose,
   "WebSocketSetOnError": _WebSocketSetOnError,
